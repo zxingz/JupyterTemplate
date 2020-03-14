@@ -6,4 +6,4 @@ repo = Repo(os.path.abspath('.'))
 notebook_path = sys.argv[0].split('/')[-1]
 repo.index.add([notebook_path])
 repo.index.commit(message='test')
-print(repo.remote())
+repo.remote().push()
